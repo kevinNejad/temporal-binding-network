@@ -26,7 +26,7 @@ if __name__ == '__main__':
             frames_dir = participant_dir / modality
             for source_file in frames_dir.glob(video_id_pattern):
                 if modality == 'rgb_frames':
-                    video = str(source_file).split('/')[-1:]
+                    video = str(source_file).split('/')[-1:][0]
                 else:
                     video, _ = str(source_file).split('/')[-2:]
 

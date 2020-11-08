@@ -20,7 +20,7 @@ class TBNDataSet(data.Dataset):
                  num_segments=3, transform=None,
                  mode='train', use_audio_dict=True):
         self.dataset = dataset
-        if audio_path is not None:
+        if audio_path is not None and len(audio_path) > 0:
             if not use_audio_dict:
                 self.audio_path = Path(audio_path)
             else:
